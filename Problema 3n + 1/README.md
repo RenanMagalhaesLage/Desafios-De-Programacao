@@ -71,3 +71,9 @@ seguido pela duração máxima do ciclo (na mesma linha).
 900 1000 174
 ```
 
+## Execução
+
+```bash
+./3n < input.txt
+```
+
