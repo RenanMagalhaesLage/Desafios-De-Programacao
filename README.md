@@ -3,7 +3,7 @@
 </div>
 
 #### Universidade Federal de Alfenas - UNIFAL
-Trabalhos realizados na disciplina de Desafios de Programação
+Problemas realizados na disciplina de Desafios de Programação
 
 #### Professor
 -[Luiz Eduardo da Silva](https://github.com/luizedsilva)
