@@ -102,6 +102,11 @@ Game #2: no king is in check.
 Game #3: white king is in check.
 ```
 
+## Execução
+
+```bash
+./xadrez < input.txt
+```
 
 
 
