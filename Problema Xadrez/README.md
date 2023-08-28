@@ -33,7 +33,7 @@ Para quem não conhece o xadrez, aqui estão os movimentos de cada peça:
 
 Exemplos de movimentos ('*' indica onde a peça pode levar outras peças):
 
-![image](https://github.com/RenannLage/Desafios-De-Programacao/assets/89847080/db07eadd-0cc8-4900-9e01-63c461df12c2)
+![image](https://github.com/RenannLage/Desafios-De-Programacao/assets/89847080/6064cb44-7671-43fc-97b0-9293a5231fed)
 
 Lembre-se de que o cavalo é a única peça que pode saltar sobre outras peças. O movimento do peão
 vai depender do seu lado. Se for um peão preto, ele só poderá se mover uma casa diagonalmente no tabuleiro. Se
