@@ -55,7 +55,7 @@ com todos os três números em uma linha e com uma linha de saída para cada lin
 e j devem aparecer na saída na mesma ordem em que apareceram na entrada e devem ser
 seguido pela duração máxima do ciclo (na mesma linha).
 
-## Sample Input
+### Sample Input
 ```bash
 1 10
 100 200
@@ -63,7 +63,7 @@ seguido pela duração máxima do ciclo (na mesma linha).
 900 1000
 ```
 
-## Sample Output
+### Sample Output
 ```bash
 1 10 20
 100 200 125
