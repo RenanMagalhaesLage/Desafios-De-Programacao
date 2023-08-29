@@ -59,7 +59,7 @@ Para cada leitura de configuração da placa você deve gerar uma das seguintes 
 
 Onde d representa o número do jogo (começando em 1).
 
-## Sample Input
+### Sample Input
 
 ```bash
 ..k.....
@@ -98,7 +98,7 @@ RNBQKB.R
 ........
 ........
 ```
-## Sample Output
+### Sample Output
 
 ```bash
 Game #1: black king is in check.
