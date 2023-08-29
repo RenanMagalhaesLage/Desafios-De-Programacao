@@ -84,7 +84,7 @@ int main()
                     if(baixo > 0)
                     {
                         /*Verificando diagonal direita de baixo*/
-                        for(int x = 1; x <= direita; x++){
+                        for(int x = 1; x <= direita, (i+x) < 7; x++){
                             if(tabuleiro[i+x][j+x] == 'B' || tabuleiro[i+x][j+x] == 'Q')
                             {
                                 for(int y = 1; y < x; y++){
@@ -95,6 +95,8 @@ int main()
                                 }
                                 if(livre == 0 && verifica == 0){
                                     printf("Game #%d: black king is in check.", game);
+                                    //printf("O rei[%d][%d] está em check por [%d][%d], direita = %d", i,j, i+x, j+x, direita);
+                                    //cout << "1" << endl;
                                     verifica = 1;
                                     check++;
                                 }
