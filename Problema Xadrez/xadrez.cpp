@@ -18,8 +18,10 @@ int main()
     int fim = 0, cont =0;
     int esquerda = 0, direita = 0, cima = 0, baixo = 0;
     int game = 0; //Variável para controlar o número de jogos
-    int livre = 0;
+    int livre = 0; // Variável que serve para verificar se o caminho entre o rei e o check está livre
     int check = 0;
+    int verifica = 0; // Variável para verificar caso ele já esteja em posição de check, criada para evitar que ele esteja em check em mais de duas posições
+    int primeira = 0; //Se for a primeira execução não irá quebrar a linha, serve apenas para formatar a saída
 
     while (fim != 1){
         /* Preenchendo o tabuleiro com os valores */
@@ -38,12 +40,17 @@ int main()
             }
             printf("\n");
         }*/
-        if(cont == 64)
+        if(cont == 64) // se é 64 significa que o tabuleiro é vazio, assim terminou a execução
         {
             fim = 1;
             break;
         }
         cont = 0;
+        if(primeira == 0){
+            primeira = 1;
+        }else{
+            cout << endl;
+        }
 
         game++;
 
@@ -86,8 +93,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: black king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: black king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -107,8 +115,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: black king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: black king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
                             }
@@ -126,8 +135,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: black king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: black king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -137,8 +147,9 @@ int main()
                         livre = 0;
 
                         /*Verificando se está em check pelo Cavalo (Knight) PARA BAIXO*/
-                        if(tabuleiro[i+2][j+1] == 'N' || tabuleiro[i+2][j-1] == 'N' || tabuleiro[i+1][j+2] == 'N' || tabuleiro[i+1][j-2] == 'N'){
-                            printf("Game #%d: black king is in check.\n", game);
+                        if((tabuleiro[i+2][j+1] == 'N' || tabuleiro[i+2][j-1] == 'N' || tabuleiro[i+1][j+2] == 'N' || tabuleiro[i+1][j-2] == 'N') && verifica == 0){
+                            printf("Game #%d: black king is in check.", game);
+                            verifica = 1;
                             check++;
                         }  
 
@@ -159,8 +170,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: black king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: black king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -179,8 +191,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: black king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: black king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -199,8 +212,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: black king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: black king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -210,8 +224,9 @@ int main()
                         livre = 0;
 
                         /*Verificando se está em check pelo Cavalo (Knight) PARA CIMA*/
-                        if(tabuleiro[i-2][j-1] == 'N' || tabuleiro[i-2][j+1] == 'N' || tabuleiro[i-1][j+2] == 'N' || tabuleiro[i-1][j-2] == 'N'){
-                            printf("Game #%d: black king is in check.\n", game);
+                        if((tabuleiro[i-2][j-1] == 'N' || tabuleiro[i-2][j+1] == 'N' || tabuleiro[i-1][j+2] == 'N' || tabuleiro[i-1][j-2] == 'N')&& verifica == 0){
+                            printf("Game #%d: black king is in check.", game);
+                            verifica = 1;
                             check++;
                         }  
                         
@@ -227,8 +242,9 @@ int main()
                                     livre++;
                                 }
                             }
-                            if(livre == 0){
-                                printf("Game #%d: black king is in check.\n", game);
+                            if(livre == 0 && verifica == 0){
+                                printf("Game #%d: black king is in check.", game);
+                                verifica = 1;
                                 check++;
                             }
 
@@ -247,8 +263,9 @@ int main()
                                     livre++;
                                 }
                             }
-                            if(livre == 0){
-                                printf("Game #%d: black king is in check.\n", game);
+                            if(livre == 0 && verifica == 0){
+                                printf("Game #%d: black king is in check.", game);
+                                verifica = 1;
                                 check++;
                             }
 
@@ -258,8 +275,9 @@ int main()
                     livre = 0;
 
                     /*Verificar se está em check pelo Peão (Pawn)*/
-                    if(tabuleiro[i+1][j-1] == 'P' || tabuleiro[i+1][j+1] == 'P'){
-                        printf("Game #%d: black king is in check.\n", game);
+                    if((tabuleiro[i+1][j-1] == 'P' || tabuleiro[i+1][j+1] == 'P') && verifica == 0){
+                        printf("Game #%d: black king is in check.", game);
+                        verifica = 1;
                         check++;
                     }   
                 }
@@ -267,6 +285,7 @@ int main()
                 /*
                     VERIFICANDO O REI BRANCO
                 */
+                verifica = 0;
                 if (tabuleiro[i][j] == 'K'){
                     direita = 7 - j;
                     esquerda = j;
@@ -289,8 +308,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: white king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: white king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -310,8 +330,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: white king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: white king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
                             }
@@ -329,8 +350,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: white king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: white king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -340,8 +362,9 @@ int main()
                         livre = 0;
 
                         /*Verificando se está em check pelo Cavalo (Knight) PARA BAIXO*/
-                        if(tabuleiro[i+2][j+1] == 'n' || tabuleiro[i+2][j-1] == 'n' || tabuleiro[i+1][j+2] == 'n' || tabuleiro[i+1][j-2] == 'n'){
-                            printf("Game #%d: white king is in check.\n", game);
+                        if((tabuleiro[i+2][j+1] == 'n' || tabuleiro[i+2][j-1] == 'n' || tabuleiro[i+1][j+2] == 'n' || tabuleiro[i+1][j-2] == 'n')&& verifica == 0){
+                            printf("Game #%d: white king is in check.", game);
+                            verifica = 1;
                             check++;
                         }  
 
@@ -362,8 +385,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: white king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: white king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -382,8 +406,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: white king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: white king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -402,8 +427,9 @@ int main()
                                         livre++;
                                     }
                                 }
-                                if(livre == 0){
-                                    printf("Game #%d: white king is in check.\n", game);
+                                if(livre == 0 && verifica == 0){
+                                    printf("Game #%d: white king is in check.", game);
+                                    verifica = 1;
                                     check++;
                                 }
 
@@ -413,8 +439,9 @@ int main()
                         livre = 0;
 
                         /*Verificando se está em check pelo Cavalo (Knight) PARA CIMA*/
-                        if(tabuleiro[i-2][j-1] == 'n' || tabuleiro[i-2][j+1] == 'n' || tabuleiro[i-1][j+2] == 'n' || tabuleiro[i-1][j-2] == 'n'){
-                            printf("Game #%d: white king is in check.\n", game);
+                        if((tabuleiro[i-2][j-1] == 'n' || tabuleiro[i-2][j+1] == 'n' || tabuleiro[i-1][j+2] == 'n' || tabuleiro[i-1][j-2] == 'n')&& verifica == 0){
+                            printf("Game #%d: white king is in check.", game);
+                            verifica = 1;
                             check++;
                         }  
                         
@@ -430,8 +457,9 @@ int main()
                                     livre++;
                                 }
                             }
-                            if(livre == 0){
-                                printf("Game #%d: white king is in check.\n", game);
+                            if(livre == 0 && verifica == 0){
+                                printf("Game #%d: white king is in check.", game);
+                                verifica = 1;
                                 check++;
                             }
 
@@ -450,8 +478,9 @@ int main()
                                     livre++;
                                 }
                             }
-                            if(livre == 0){
-                                printf("Game #%d: white king is in check.\n", game);
+                            if(livre == 0 && verifica == 0){
+                                printf("Game #%d: white king is in check.", game);
+                                verifica = 1;
                                 check++;
                             }
 
@@ -461,8 +490,9 @@ int main()
                     livre = 0;
 
                     /*Verificar se está em check pelo Peão (Pawn)*/
-                    if(tabuleiro[i-1][j-1] == 'p' || tabuleiro[i-1][j+1] == 'p'){
-                        printf("Game #%d: white king is in check.\n", game);
+                    if((tabuleiro[i-1][j-1] == 'p' || tabuleiro[i-1][j+1] == 'p')&& verifica == 0){
+                        printf("Game #%d: white king is in check.", game);
+                        verifica = 1;
                         check++;
                     }   
                 
@@ -472,10 +502,10 @@ int main()
         }
 
         if(check == 0){
-            printf("Game #%d: no king is in check.\n", game);
+            printf("Game #%d: no king is in check.", game);
         }
         check = 0;
-
+        verifica = 0;
     }
     return 0;
 }
