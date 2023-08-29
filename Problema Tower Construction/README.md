@@ -28,20 +28,26 @@ Um único número inteiro, o número de torres resultantes.
 
 ### Sample Input 1
 ```bash
-10
-4 3 3 2 1 2 2 1 1 3
+3
+Skru op!
+Skru op!
+Skru ned!
 
 ```
 
 ### Sample Output 1
 ```bash
-3
+8
 ```
 
 ### Sample Input 2
 ```bash
 5
-2 2 2 2 2
+Skru op!
+Skru op!
+Skru op!
+Skru op!
+Skru ned!
 
 ```
 
