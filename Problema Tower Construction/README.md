@@ -20,7 +20,7 @@ Dada a ordem e as larguras dos blocos, quantas torres Kim vai construir?
 
 ## Input
 
-Um número inteiro <i>N</i> com 1 <= <i>N</i> <= 10^5, seguido por uma linha contendo <i>N</i> números inteiros <i>x</i> , onde 1 <= <i>x</i> <= 10^6, correspondendo à largura dos tijolos na ordem em que estão disponíveis.
+Um número inteiro <i>N</i> com 1 ≤ <i>N</i> ≤ 10^5, seguido por uma linha contendo <i>N</i> números inteiros <i>x</i> , onde 1 ≤ <i>x</i> ≤ 10^6, correspondendo à largura dos tijolos na ordem em que estão disponíveis.
 
 ## Output
 
