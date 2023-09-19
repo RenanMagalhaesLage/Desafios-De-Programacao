@@ -23,8 +23,8 @@ Se, em vez disso, o terceiro jogador também tirar 6, então ninguém vence.
 
 ## Input
 
-A primeira linha da entrada contém um número inteiro <i> n </i>, 1 <= <i> n </i> <= 100, o tamanho do grupo. A segunda linha contém números <i> n </i> inteiros, a1, a2, a3, ..., an (1<=ai <=6 para todo
-1 <= i <= n): o resultado do lançamento de dado de cada participante.
+A primeira linha da entrada contém um número inteiro <i> n </i>, 1 ≤ <i> n </i> ≤ 100, o tamanho do grupo. A segunda linha contém números <i> n </i> inteiros, a1, a2, a3, ..., an (1 ≤ ai ≤ 6 para todo
+1 ≤ i ≤ n): o resultado do lançamento de dado de cada participante.
 
 ## Output
 
