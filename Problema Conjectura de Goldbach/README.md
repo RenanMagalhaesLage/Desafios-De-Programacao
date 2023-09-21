@@ -19,7 +19,7 @@ Pode haver várias maneiras de representar um número par dado como a soma de n�
 
 ## Input
 
-A entrada começa com um número inteiro <i>n</i> (1<= n <= 100) indicando o número de casos. As seguintes <i>n</i> linhas contêm cada uma um caso de teste com um único número par x (4 <= x <= 32000).
+A entrada começa com um número inteiro <i>n</i> (1≤ n ≤ 100) indicando o número de casos. As seguintes <i>n</i> linhas contêm cada uma um caso de teste com um único número par x (4 ≤ x ≤ 32000).
 
 ## Output
 
