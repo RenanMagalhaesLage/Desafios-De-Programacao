@@ -36,7 +36,7 @@ Cada número está em sua própria linha separada, seguido diretamente por uma q
 ## Output
 Você deve imprimir as coordenadas correspondentes da Maja para os números do Willi, cada par de coordenadas em uma linha separada.
 
-### SampleInput
+### Sample Input
 
 ```bash
 1
@@ -46,7 +46,7 @@ Você deve imprimir as coordenadas correspondentes da Maja para os números do W
 5
 ```
 
-### SampleOutput
+### Sample Output
 
 ```bash
 0 0
